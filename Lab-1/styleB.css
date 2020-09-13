@@ -1,0 +1,44 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+  
+.box{
+    position: relative;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom right,#dfe1e7, #eeeff2);
+    height: 150px;
+    width: 100px;
+    border-left: 10px dotted #D0D0FF;
+    font-size: 40px;
+    margin: 10px;
+    padding: 10px;
+    transition: ease-out 0.2s;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden; 
+   box-shadow: 5px 5px 5px rgb(179, 179, 179); 
+   animation: colorChange 1s ;
+   cursor: pointer;
+}
+.box:hover{
+    animation: colorChange 2s infinite linear;
+}
+@keyframes colorChange{
+    0% {color: yellow};
+    50% {color: goldenrod};
+    100% {color: yellow};
+}
+.box-parent:nth-child(6) .box{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
