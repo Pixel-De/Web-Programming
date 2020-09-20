@@ -1,0 +1,151 @@
+html{
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+  
+.box{
+    position: relative;
+    text-transform: uppercase;
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+    transition: ease-out 0.2s;
+    perspective: 100px;
+    transform-style: preserve-3d;
+    backface-visibility: hidden; 
+   box-shadow: 5px 5px 5px rgb(179, 179, 179); 
+}
+
+.box-parent:nth-child(1) .box::after{
+    content: "Extra Credit please";
+    width: 100%;
+    height: 100%;    
+    position: absolute;
+    left: 0;
+    transform: rotateY(-180deg);
+    background: linear-gradient(to bottom right,#dfe1e7, #eeeff2);
+    backface-visibility: hidden;
+    font-size: 15px;
+   box-shadow: 5px 5px 5px rgb(179, 179, 179);
+  
+}
+/*.box-parent:hover .box::after{
+    transform: rotateY(180deg);
+}*/
+.box-parent:nth-child(1):hover .box{
+    transform: rotateY(180deg);
+}
+.box-parent:nth-child(2) .box{
+    border: 1px solid black; 
+    box-shadow: none;
+    position: relative;
+    overflow: hidden;
+}
+.box-parent:nth-child(2) .box::after{
+    content: "";
+    position: absolute;
+    transition: ease-in-out 0.5s;
+    transform: skew(25deg);
+    background: black;
+    height: 100%;
+    width: 150%;
+    left: -25%;
+}
+.box-parent:nth-child(2):hover .box::after{
+   width: 0;
+}
+.box-parent:nth-child(3) .box{
+    position: relative;
+    transition: ease 0.3s;
+    overflow: hidden;
+}
+.box-parent:nth-child(3) .box::after{
+    content: "";
+    position: absolute;
+    background: red;
+    transition: ease 0.3s;
+    animation: circularA 3s infinite;
+    top: 0;
+    height: 2px;
+    width: 100%;
+}
+.box-parent:nth-child(3) .box::before{
+    content: "";
+    position: absolute;
+    background: red;
+    transition: ease 0.3s;
+    animation: circularB 3s infinite;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+}
+@keyframes circularA {
+    0%{
+        transform: translateX(-200%);
+    }
+    50%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+}
+@keyframes circularB {
+    0%{
+        transform: translateX(100%);
+    }
+    50%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(100%);
+    }
+}
+.box-parent:nth-child(4) .box{
+    position: relative;
+    transition: ease 0.3s;
+}
+.box-parent:nth-child(4) .box::after{
+    content: "";
+    position: absolute;
+    background: rgb(19, 182, 204);
+    transition: ease-out 0.3s;
+    animation: bubble 5s infinite;
+    top: 0;
+    height: 15%;
+    width: 15%;
+    border-radius: 7.5px;
+    left: 0;
+}
+@keyframes bubble {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        width: 100px;
+    }
+    50%{ 
+        transform: translateX(75px);
+        right: 0;
+    }
+    75%{
+        
+    }
+    100%{
+       
+    }
+}
+
+

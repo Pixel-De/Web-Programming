@@ -30,13 +30,10 @@ html{
    cursor: pointer;
 }
 .box:hover{
-    animation: colorChange 2s infinite linear;
+    background: yellow;
+    color: goldenrod;
 }
-@keyframes colorChange{
-    0% {color: yellow};
-    50% {color: goldenrod};
-    100% {color: yellow};
-}
+
 .box-parent:nth-child(6) .box{
     position: fixed;
     right: 0;
