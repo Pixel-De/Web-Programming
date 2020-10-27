@@ -1,0 +1,52 @@
+table {
+  background-color: white;
+  height: auto;
+  width: auto;
+  text-align: center;
+  margin: auto;
+  border: solid black 1px;
+  border-spacing: 0px;
+}
+.month-back {
+  cursor: pointer;
+}
+.month-forward {
+  cursor: pointer;
+}
+.aa {
+  background: linear-gradient(to left, rgb(46, 145, 46), rgb(60, 60, 197));
+  color: white;
+  font-size: 25px;
+}
+.dd {
+  font-weight: 800;
+  font-size: 19px;
+}
+
+tbody td {
+  border: solid lightgrey 1px;
+  height: 15px;
+  width: 15px;
+  padding: 8px;
+}
+.selectable-day:hover {
+  background-color: rgb(3, 56, 110);
+  color: white;
+  cursor: pointer;
+}
+/* td:nth-child(2) {
+  color: red;
+} */
+tbody td:nth-child(2):hover {
+  background-color: red;
+}
+td:first-child {
+  color: red;
+}
+.dimmed {
+  color: lightgrey;
+}
+.active {
+  color: white;
+  background-color: rgb(3, 56, 110);
+}
